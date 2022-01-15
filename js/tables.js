@@ -10,7 +10,7 @@
       <div 
         class="col-12 col-xl-4 ani_fade_in mb-5" 
         style="animation: fade_in .8s .${delay}s forwards;">
-        <div class="d-flex">
+        <div class="d-flex justify-content-center">
           <h3 class="fs-4 text-vertical mx-1">${title}</h3>
           <table>
             <tr>
