@@ -1,0 +1,210 @@
+$dark: #223;
+$light: #eee;
+$ball: #fa0;
+$star: #e20;
+$border: 2px solid rgba(#fff, 0.2);
+
+body {
+  background: $dark;
+  color: $light;
+}
+
+a {
+  color: $light;
+  text-decoration: none;
+}
+
+td {
+  font-size: 12px;
+  text-align: end;
+  border-bottom: $border;
+}
+
+.title {
+  border-bottom: $border;
+}
+
+.fs-7 {
+  font-size: 14px;
+}
+
+.text-vertical {
+  writing-mode: vertical-lr;
+}
+
+.text-transparent {
+  color: transparent;
+  border-bottom: $border;
+  border-color: transparent;
+}
+
+.ans-hight {
+  height: 200px;
+}
+
+.ball {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  color: $dark;
+  background: radial-gradient(
+    circle at 10px 10px,
+    $ball 50%,
+    darken($ball, 60)
+  );
+  filter: brightness(.4);
+  transition: .3s;
+
+  &_2 {
+    .star {
+      transform: translate(-100%, -30%) rotate(15deg);
+    }
+  }
+  &_3 {
+    .star_1 {
+      top: 35%;
+      left: 50%;
+    }
+    .star_2 {
+      top: 60%;
+      left: 70%;
+    }
+    .star_3 {
+      top: 60%;
+      left: 30%;
+    }
+  }
+  &_4 {
+    .star_1 {
+      top: 35%;
+      left: 40%;
+    }
+    .star_2 {
+      top: 65%;
+      left: 60%;
+    }
+    .star_3 {
+      top: 60%;
+      left: 25%;
+    }
+    .star_4 {
+      top: 35%;
+      left: 75%;
+    }
+  }
+  &_5 {
+    .star_1 {
+      top: 28%;
+      left: 50%;
+    }
+    .star_2 {
+      top: 45%;
+      left: 72%;
+    }
+    .star_3 {
+      top: 45%;
+      left: 28%;
+    }
+    .star_4 {
+      top: 70%;
+      left: 65%;
+    }
+    .star_5 {
+      top: 70%;
+      left: 35%;
+    }
+  }
+  &_6 {
+    .star_1 {
+      top: 50%;
+      left: 50%;
+    }
+    .star_2 {
+      top: 25%;
+      left: 50%;
+    }
+    .star_3 {
+      top: 45%;
+      left: 78%;
+    }
+    .star_4 {
+      top: 45%;
+      left: 22%;
+    }
+    .star_5 {
+      top: 72%;
+      left: 65%;
+    }
+    .star_6 {
+      top: 72%;
+      left: 35%;
+    }
+  }
+}
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: $star;
+  transform: translate(-50%, -50%) rotate(15deg);
+  transition: .3s;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+
+  &_1 {
+    top: 50%;
+    left: 50%;
+  }
+  &_2 {
+    top: 35%;
+    left: 75%;
+  }
+  &_3 {
+    top: 65%;
+    left: 25%;
+  }
+  &_4 {
+    top: 35%;
+    left: 25%;
+  }
+  &_5 {
+    top: 65%;
+    left: 75%;
+  }
+  &_6 {
+    top: 20%;
+    left: 50%;
+  }
+  &_7 {
+    top: 80%;
+    left: 50%;
+  }
+}
+
+.tfRadio:checked + .ball {
+  filter: brightness(1);
+}
+
+.ani_fade_in {
+  opacity: 0;
+  transform: translateY(20%);
+  animation: fade_in 0.8s forwards;
+}
+
+@keyframes fade_in {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -17,7 +17,6 @@ const keepPercent = [
   [1, 2, 4, 6, 9, 17, 33],
 ];
 const downgradePercent = [
-  [0],
   [100],
   [35, 65],
   [15, 35, 50],
@@ -25,3 +24,7 @@ const downgradePercent = [
   [5, 10, 10, 25, 50],
   [2, 4, 4, 15, 25, 50],
 ];
+
+function fixNum(num) {
+  return Math.round(num * 100) / 100;
+}

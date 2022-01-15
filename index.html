@@ -1,92 +1,57 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DreamCoder 編夢者聖城 - 夢精靈融合計算機</title>
-  <link rel="stylesheet" href="./index.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class=container>
-    <header class="flex-center">
-      <h1><a href="https://discord.gg/pkxEUrjCga">DreamCoder 編夢者聖城</a></h1>
-      <h2>夢精靈融合計算機</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DreamCoder 編夢者聖城 - 夢精靈融合計算機</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=ZCOOL+KuaiLe&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./scss/all.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container">
+        <h1 class="text-center fw-bold p-3">
+          <a href="https://discord.gg/pkxEUrjCga" target="_brand"
+            >DreamCoder 編夢者聖城</a
+          >
+        </h1>
+      </div>
     </header>
-  
-    <form class="tf__group" id="tf">
-      <div class="tf">
-        <h3 class="m-2">融合第一隻</h3>
-        <div>
-          <input type="radio" name="tf1" id="tf1_1" data-value="1" checked>
-          <label for="tf1_1" class="one">1</label>
-          <input type="radio" name="tf1" id="tf1_2" data-value="2">
-          <label for="tf1_2" class="two">2</label>
-          <input type="radio" name="tf1" id="tf1_3" data-value="3">
-          <label for="tf1_3" class="three">3</label>
-          <input type="radio" name="tf1" id="tf1_4" data-value="4">
-          <label for="tf1_4" class="four">4</label>
-          <input type="radio" name="tf1" id="tf1_5" data-value="5">
-          <label for="tf1_5" class="five">5</label>
-          <input type="radio" name="tf1" id="tf1_6" data-value="6">
-          <label for="tf1_6" class="six">6</label>
-          <input type="radio" name="tf1" id="tf1_7" data-value="7">
-          <label for="tf1_7" class="seven">7</label>
-        </div>
+    <div class="container">
+      <h2 class="text-center">夢精靈融合計算機</h2>
+      <!-- 選擇融合材料 transformRadio.js -->
+      <form
+        class="d-flex justify-content-around align-items-end mb-4"
+        id="tfRoot"
+      ></form>
+      <!-- 運算顯示結果 transformTable.js -->
+      <div class="ans-hight row mb-4">
+        <div class="col-5 text-end">結果：</div>
+        <div class="col-7" id="ansRoot"></div>
       </div>
-      <i class="fas fa-plus m-2"></i>
-      <div class="tf">
-        <h3 class="m-2">融合第二隻</h3>
-        <div>
-          <input type="radio" name="tf2" id="tf2_1" data-value="1" checked>
-          <label for="tf2_1" class="one">1</label>
-          <input type="radio" name="tf2" id="tf2_2" data-value="2">
-          <label for="tf2_2" class="two">2</label>
-          <input type="radio" name="tf2" id="tf2_3" data-value="3">
-          <label for="tf2_3" class="three">3</label>
-          <input type="radio" name="tf2" id="tf2_4" data-value="4">
-          <label for="tf2_4" class="four">4</label>
-          <input type="radio" name="tf2" id="tf2_5" data-value="5">
-          <label for="tf2_5" class="five">5</label>
-          <input type="radio" name="tf2" id="tf2_6" data-value="6">
-          <label for="tf2_6" class="six">6</label>
-          <input type="radio" name="tf2" id="tf2_7" data-value="7">
-          <label for="tf2_7" class="seven">7</label>
-        </div>
-      </div>
-      <i class="fas fa-plus m-2"></i>
-      <div class="tf">
-        <h3 class="m-2">融合第三隻</h3>
-        <div>
-          <input type="radio" name="tf3" id="tf3_1" data-value="1" checked>
-          <label for="tf3_1" class="one">1</label>
-          <input type="radio" name="tf3" id="tf3_2" data-value="2">
-          <label for="tf3_2" class="two">2</label>
-          <input type="radio" name="tf3" id="tf3_3" data-value="3">
-          <label for="tf3_3" class="three">3</label>
-          <input type="radio" name="tf3" id="tf3_4" data-value="4">
-          <label for="tf3_4" class="four">4</label>
-          <input type="radio" name="tf3" id="tf3_5" data-value="5">
-          <label for="tf3_5" class="five">5</label>
-          <input type="radio" name="tf3" id="tf3_6" data-value="6">
-          <label for="tf3_6" class="six">6</label>
-          <input type="radio" name="tf3" id="tf3_7" data-value="7">
-          <label for="tf3_7" class="seven">7</label>
-        </div>
-      </div>
-    </form>
-    <div class="ans m-2">
-      <div>結果：</div>
-      <div id="ans"></div>
-      <div></div>
+      <!-- 公式表 tables.js -->
+      <div class="row" id="tableRoot"></div>
     </div>
-  
-    <div class="table__group" id="root"></div>
-  </div>
-  <script src="./percent.js"></script>
-  <script src="./table.js"></script>
-  <script src="./tf.js"></script>
-</body>
+    <!-- const 常數 -->
+    <script src="./js/const.js"></script>
+    <script src="./js/transformRadio.js"></script>
+    <script src="./js/transformTable.js"></script>
+    <script src="./js/tables.js"></script>
+  </body>
 </html>
