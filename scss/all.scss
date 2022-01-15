@@ -39,7 +39,14 @@ td {
 }
 
 .ans-hight {
-  height: 200px;
+  height: 250px;
+}
+
+.tableWidth {
+  @media (max-width: 1200px) {
+    margin: 0 auto;
+    max-width: 460px;
+  }
 }
 
 .ball {
