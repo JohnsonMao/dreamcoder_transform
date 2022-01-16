@@ -24,16 +24,16 @@
     <link rel="stylesheet" href="./scss/all.css" />
   </head>
   <body>
-    <header class="nav">
+    <header class="fixed-top">
       <div class="container">
-        <h1 class="text-center fw-bold p-3">
+        <h1 class="text-center fw-bold h2 p-3 m-0">
           <a href="https://discord.gg/pkxEUrjCga" target="_brand"
-            >DreamCoder 編夢者聖城</a
-          >
+            >DreamCoder 編夢者聖城
+          </a>
         </h1>
       </div>
     </header>
-    <div class="container">
+    <div class="container pt-5 mt-5">
       <h2 class="text-center">夢精靈融合計算機</h2>
       <!-- 選擇融合材料 transformRadio.js -->
       <form
@@ -48,6 +48,10 @@
       <!-- 公式表 tables.js -->
       <div class="row tableWidth" id="tableRoot"></div>
     </div>
+
+    <footer>
+      <p class="text-center">本網站僅供參考，沒有商業用途</p>
+    </footer>
     <!-- const 常數 -->
     <script src="./js/const.js"></script>
     <script src="./js/transformRadio.js"></script>

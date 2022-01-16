@@ -20,6 +20,11 @@ td {
   border-bottom: $border;
 }
 
+header {
+  background: rgba($dark, .6);
+  backdrop-filter: blur(2px);
+}
+
 .title {
   border-bottom: $border;
 }

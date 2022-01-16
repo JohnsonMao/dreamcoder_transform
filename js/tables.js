@@ -32,12 +32,12 @@
     percent.forEach((itemArr) => {
       star === 8
         ? ""
-        : (table += `<tr><th class="title">${
+        : (table += `<tr style="color: #9f${(star * 2).toString(16)};"><th class="title">${
             title === UPGRADE
               ? "升 " + star + " 星"
               : title === KEEP
-              ? "保持 " + star + " 星"
-              : "失敗"
+              ? star + " 星"
+              : "融合失敗"
           }</th>`);
       itemArr.forEach((item) => {
         table += `${

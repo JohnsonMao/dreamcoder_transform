@@ -42,7 +42,13 @@
       upgradeStar - 1 - index === 0
       ? null
       : (downgradeHTML += `
-      <li class="text-danger ani_fade_in" style="animation: fade_in .8s .${index + 2}s forwards;">
+      <li 
+        class="ani_fade_in" 
+        style="
+          animation: fade_in .8s .${index + 2}s forwards; 
+          color: #f${7 - index}0;
+        " 
+      >
         降為 ${upgradeStar - 1 - index} 星的機率為 ${fixNum(downgrade * item)} %
       </li>
     `);
@@ -50,11 +56,18 @@
 
     /* 即時渲染 */
     ansRoot.innerHTML = `
+      <p>選擇 ${tfArr[0]} 星、${tfArr[1]} 星、${tfArr[2]} 星，進行融合</p>
       <ul>
         ${
           upgradeStar + 1 > 7
             ? ""
-            : `<li class="text-warning ani_fade_in" style="animation: fade_in .8s forwards;">
+            : `<li 
+                  class="ani_fade_in" 
+                  style="
+                    animation: fade_in .8s forwards;
+                    color: #bf0;
+                  "
+                >
                 升級 ${upgradeStar + 1} 星的機率為 ${upgrade} %
               </li>`
         }
