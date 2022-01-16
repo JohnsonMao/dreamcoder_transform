@@ -33,12 +33,10 @@
 
 
     let downgradeHTML = "";
-    const newDowngradePercent = downgradePercent[upgradeStar - 2]
-    .concat()
-    .reverse();
+    const newDowngradePercent = downgradePercent[upgradeStar - 2]?.concat().reverse();
 
     /* 降星分布機率 */
-    newDowngradePercent.forEach((item, index) => {
+    newDowngradePercent?.forEach((item, index) => {
       upgradeStar - 1 - index === 0
       ? null
       : (downgradeHTML += `
