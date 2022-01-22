@@ -31,15 +31,17 @@
       ((100 - upgrade) * sum(keepPercent, upgradeStar, newTfArr)) / 100;
     const downgrade = (100 - upgrade - keep) / 100;
 
-
     let downgradeHTML = "";
-    const newDowngradePercent = downgradePercent[upgradeStar - 2]?.concat().reverse();
+    const newDowngradePercent = downgradePercent[upgradeStar - 2]
+      ? downgradePercent[upgradeStar - 2].concat().reverse()
+      : null;
 
     /* 降星分布機率 */
-    newDowngradePercent?.forEach((item, index) => {
-      upgradeStar - 1 - index === 0
-      ? null
-      : (downgradeHTML += `
+    newDowngradePercent &&
+      newDowngradePercent.forEach((item, index) => {
+        upgradeStar - 1 - index === 0
+          ? null
+          : (downgradeHTML += `
       <li 
         class="ani_fade_in" 
         style="
@@ -50,7 +52,7 @@
         降為 ${upgradeStar - 1 - index} 星的機率為 ${fixNum(downgrade * item)} %
       </li>
     `);
-    });
+      });
 
     /* 即時渲染 */
     ansRoot.innerHTML = `
